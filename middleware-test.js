@@ -2,13 +2,14 @@ const express = require('express')
 const app = express()
 
 const myLogger = function (req, res, next) {
-    console.log('LOGGED')
+    console.log('Server middleware')
     next()
 }
 
 app.use(myLogger)
 
 app.get('/', (req, res) => {
+    console.log('Server say hi')
     res.send('Hello World!')
 })
 
