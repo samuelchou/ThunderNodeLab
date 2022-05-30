@@ -19,7 +19,7 @@ app.get('/users/:userId', (req, res) => {
 
 
 const hiddenMiddleware = function (req, res, next) {
-    console.log('This will never trigger')
+    console.log(`Requesting unhandled url: ${req.originalUrl}`)
     next()
 }
 
