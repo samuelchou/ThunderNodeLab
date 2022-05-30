@@ -15,4 +15,16 @@ router.get('/about', (req, res) => {
   res.send('About birds')
 })
 
+router.get('/species/:name', (req, res, next) => {
+  if (req.params.name === 'sparrow') next()
+  else next('route') // unknown bird, skips out
+}, (req, res, next) => {
+  res.send(`This is bird ${req.params.name}`)
+})
+
+// handled unhandled species
+router.get('/species/:name', (req, res, next) => {
+  res.send(`The bird ${req.params.name} is still investigating.`)
+})
+
 module.exports = router
