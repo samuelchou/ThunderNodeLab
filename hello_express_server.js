@@ -29,3 +29,7 @@ const birds = require('./bird_module/router')
 
 app.use('/birds', birds)
 
+let cal = require('./calculation/fast-multiply')
+
+console.log(`number 629 triple is ${cal.double(629)}`)
+
