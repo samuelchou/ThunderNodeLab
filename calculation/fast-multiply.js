@@ -3,7 +3,7 @@ function double(n) {
 }
 
 module.exports = {
-    double: double,
+    do_double: double,
     triple: function(n) {
         return n * 3
     }

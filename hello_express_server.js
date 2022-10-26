@@ -31,5 +31,8 @@ app.use('/birds', birds)
 
 let cal = require('./calculation/fast-multiply')
 
-console.log(`number 629 triple is ${cal.double(629)}`)
+console.log(`number 629 triple is ${cal.triple(629)}`)
 
+let { do_double } = require('./calculation/fast-multiply')
+
+console.log(`number 629 double is ${do_double(629)}`)
